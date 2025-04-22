@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Audit Logs</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 1rem;
+    }
+    h1 {
+      font-size: 1.5rem;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 1rem;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.5rem;
+      text-align: left;
+    }
+    th {
+      background-color: #f3f3f3;
+    }
+  </style>
+</head>
+<body>
+  <h1>📜 Audit Logs (auto-refreshing...)</h1>
+  <table id="logTable">
+    <thead>
+      <tr>
+        <th>Timestamp</th>
+        <th>Event</th>
+        <th>Entity</th>
+        <th>Details</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    async function loadLogs() {
+      try {
+        const res = await fetch('/odata/v4/loyalty/AuditLogs');
+        const data = await res.json();
+        const tableBody = document.querySelector('#logTable tbody');
+        tableBody.innerHTML = '';
+
+        data.value.reverse().forEach(log => {
+          const row = document.createElement('tr');
+          row.innerHTML = `
+            <td>${new Date(log.timestamp).toLocaleString()}</td>
+            <td>${log.eventType}</td>
+            <td>${log.entity}</td>
+            <td>${log.details || '-'}</td>
+          `;
+          tableBody.appendChild(row);
+        });
+      } catch (err) {
+        console.error('Failed to load logs:', err);
+      }
+    }
+
+    // Initial load
+    loadLogs();
+
+    // Refresh every 15 seconds
+    setInterval(loadLogs, 15000);
+  </script>
+</body>
+</html>

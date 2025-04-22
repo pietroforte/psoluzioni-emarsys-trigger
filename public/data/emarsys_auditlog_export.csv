@@ -1,0 +1,3 @@
+ID,timestamp,eventType,entity,details
+"27d48aa2-7475-484b-b072-c068bc5c16b4","2025-04-17T02:10:55Z","triggerEmarsys","CampaignEvent","{\"contactID\":\"c111\",\"eventCode\":\"winback_campaign_trigger\",\"preview\":\"\\n      <h2>Hello Alice,</h2>\\n      <p>We miss you! Come back and enjoy 20% off your next order.</p>\\n      <p>Use code <strong>WELCOME20</strong> at checkout.</p>\\n    \"}"
+"ee71af58-cc71-4f4b-a7b5-cb401397a3d5","2025-04-17T02:21:56Z","triggerEmarsys","CampaignEvent","{\"contactID\":\"c222\",\"eventCode\":\"winback_campaign_trigger\",\"preview\":\"\\n      <h2>Hello Bob,</h2>\\n      <p>We miss you! Come back and enjoy 20% off your next order.</p>\\n      <p>Use code <strong>WELCOME20</strong> at checkout.</p>\\n    \"}"

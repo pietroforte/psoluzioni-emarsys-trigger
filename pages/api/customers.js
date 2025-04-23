@@ -9,5 +9,6 @@ export default function handler(req, res) {
     columns: true,
     skip_empty_lines: true
   });
+
   res.status(200).json({ value: records });
 }

@@ -1,6 +1,6 @@
-import fs from 'fs';
-import path from 'path';
-import { parse } from 'csv-parse/sync';
+const fs = require('fs');
+const path = require('path');
+const { parse } = require('csv-parse/sync');
 
 export default function handler(req, res) {
   const filePath = path.join(process.cwd(), 'public/data/Customer.csv');

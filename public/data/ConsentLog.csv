@@ -1,3 +1,0 @@
-ID,customer_ID,type,consented,timestamp
-cl100,c111,Marketing,True,2025-04-01T08:00:00Z
-cl200,c222,Analytics,False,2025-04-03T10:15:00Z

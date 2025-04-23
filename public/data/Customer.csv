@@ -1,3 +1,4 @@
-ID,firstName,lastName,email,birthDate,consentGiven
-c111,Ricardo P,Silva,alice@example.com,4/10/85,TRUE
-c222,Psoluzioni,Martins,bob@example.com,8/25/90,FALSE
+ID,firstName
+C001,Anna
+C002,Lucas
+C003,Sofia

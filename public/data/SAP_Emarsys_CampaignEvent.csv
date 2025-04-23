@@ -1,2 +1,4 @@
-ID,name,eventCode,description
-22222222-2222-2222-2222-222222222222,Winback Campaign,winback_campaign_trigger,Re-engage inactive users
+eventCode,name
+WELCOME,Welcome Journey
+REACTIVATION,Winback Campaign
+BIRTHDAY,Birthday Greeting

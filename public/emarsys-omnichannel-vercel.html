@@ -180,7 +180,7 @@
     );
 
     async function downloadAuditLog() {
-      const res = await fetch("/odata/v4/loyalty/AuditLogs");
+      const res = await fetch("/api/auditlog");
       const data = await res.json();
       const rows = data.value;
       if (rows.length === 0) {
